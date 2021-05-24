@@ -5,7 +5,7 @@ import Recipes from "./components/Recipes";
 import Axios from "axios";
 
 function App() {
-  const [search, setSerach] = useState("Abhishek kumar sharma");
+  const [search, setSerach] = useState("chiken");
   const [recipes, setRecipes] = useState([]);
 
   const APP_ID = "5d00f2f7";
@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     getRecipes();
-  });
+  }, []);
 
   const getRecipes = async () => {
     const res = await Axios.get(
